@@ -14,7 +14,10 @@ for line in f:
 	for item in line:
 		if 'last' in prev and item is not '':
 			w.write(item + ',')
-		if 'dob' in prev or 'sex' in prev or 'middle' in prev or 'race' in prev or 'mcid' in prev:
+		elif 'dob' in prev:
+			w.write(item[:10] + ',')
+
+		elif 'sex' in prev or 'middle' in prev or 'race' in prev or 'mcid' in prev:
 			w.write(item + ',')
 		elif 'first' in prev:
 			w.write(item + '\n')

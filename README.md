@@ -31,6 +31,8 @@ For security reasons, I have not included the settings.py file. You will have to
     
 ###Running Tools###
 
+***All scripts must be installed as in the repo in order to work! I take no liability for damages caused by running scripts***
+
 There is a single script file that will find the pdf, download it, convert it, scrub it, process it, and then push it 
 to a json file
 
@@ -39,6 +41,10 @@ to a json file
 Another script will take the generated json, and convert it to a csv with the format of last,dob,sex,middle,race,mcid,first .
 
     > python ./tools/json-readable.py
+
+Another script will take teh generated csv, and fill out a django connected database. The database must be defined via settings.py
+
+    > python dbfiller.py
 
 
     
