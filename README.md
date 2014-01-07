@@ -20,8 +20,10 @@ Once the script runs, it saves the PDF document locally, converts it to text, an
 
 ###Install###
 
-    > pip install bs4
-    > pip install pdfminer
+    > pip install beautifulsoup4
+    > pip install http://pypi.python.org/packages/source/p/pdfminer/pdfminer-20110515.tar.gz
+
+Please ensure that you install that exact version of pdfminer. More recent versions may break the process_pdf command!
     
 ###Running###
 

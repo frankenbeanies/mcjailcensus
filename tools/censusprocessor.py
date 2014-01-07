@@ -11,8 +11,6 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from cStringIO import StringIO
 
-from dbtool import DatabaseTool
-
 class CensusProcessor(object):
 
     def __init__(self,DEBUG=False):
@@ -515,11 +513,5 @@ if __name__ == '__main__':
  
         with open("{0}.json".format(filename),"w") as f:
             f.write(json.dumps(retdata))
-    
-        dt = DatabaseTool(DEBUG=True)
-
-        #dt.deletedb()   
- 
-        dt.addmultiple(retdata)
 
         print "Census Processed.  Exiting."
