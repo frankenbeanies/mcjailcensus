@@ -1,8 +1,8 @@
 #Parse json to csv with format last,dob,sex,middle,race,mcid,first
 import re
 
-f = open('../docs/census16.pdf.json')
-w = open('../docs/readable.csv', 'w')
+f = open('docs/census16.pdf.json')
+w = open('docs/readable.csv', 'w')
 
 prev = ''
 
@@ -25,17 +25,17 @@ for line in f:
 f.close()
 w.close()
 
-f = open('../docs/readable.csv')
+f = open('docs/readable.csv')
 
 lst = []
 
 for line in f:
-	if line[0] is not ',':
+	if len(line.split(',')) is 7:
 		lst.append(line)
 
 f.close()
 
-f = open('../docs/readable.csv', 'w')
+f = open('docs/readable.csv', 'w')
 
 for line in lst:
 	f.write(line)
