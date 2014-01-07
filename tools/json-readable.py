@@ -37,6 +37,7 @@ f.close()
 
 f = open('docs/readable.csv', 'w')
 
+f.write('Last Name, Date of Birth, Sex, Middle Name, Race, MCID, First Name\n' )
 for line in lst:
 	f.write(line)
 
