@@ -32,7 +32,7 @@ For security reasons, I have not included the settings.py file. You will have to
 ###Running Tools###
 
 There is a single script file that will find the pdf, download it, convert it, scrub it, process it, and then push it 
-to the mongodb database.
+to a json file
 
     > python ./tools/censusprocessor.py
 
@@ -40,5 +40,5 @@ Another script will take the generated json, and convert it to a csv with the fo
 
     > python ./tools/json-readable.py
 
-  
+
     
