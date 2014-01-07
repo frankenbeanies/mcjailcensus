@@ -55,8 +55,8 @@ With a  settings.py file (**that has database options configured**) placed in th
 	> python ./tools/censusprocessor.py
 	> python ./tools/json-readable.py
 	> python dbfiller.py
-	> python syncdb
-	> manage.py runserver
+	> python manage.py syncdb
+	> python manage.py runserver
 
 Then, from the browser of your choice, navigate to 
 
