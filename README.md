@@ -20,6 +20,7 @@ Once the script runs, it saves the PDF document locally, converts it to text, an
 
 ###Install###
 
+	> pip install Django
     > pip install beautifulsoup4
     > pip install http://pypi.python.org/packages/source/p/pdfminer/pdfminer-20110515.tar.gz
 
@@ -47,4 +48,19 @@ Another script will take teh generated csv, and fill out a django connected data
     > python dbfiller.py
 
 
+###Run Django Server###
+
+With a  settings.py file (**that has database options configured**) placed in the lower of the two mcjailcensus directories, from the same directory as manage.py, run the following commands:
+
+	> python ./tools/censusprocessor.py
+	> python ./tools/json-readable.py
+	> python dbfiller.py
+	> python syncdb
+	> manage.py runserver
+
+Then, from the browser of your choice, navigate to 
+
+	http://localhost:8000
+
+or whatever your configured the runtime url to be. 
     
