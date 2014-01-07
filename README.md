@@ -29,10 +29,16 @@ Please ensure that you install that exact version of pdfminer. More recent versi
 
 For security reasons, I have not included the settings.py file. You will have to do that yourself. Batteries are not included. 
     
-###Running###
+###Running Tools###
 
 There is a single script file that will find the pdf, download it, convert it, scrub it, process it, and then push it 
 to the mongodb database.
 
     > python ./tools/censusprocessor.py
+
+Another script will take the generated json, and convert it to a csv with the format of last,dob,sex,middle,race,mcid,first .
+
+    > python ./tools/json-readable.py
+
+  
     
