@@ -37,4 +37,5 @@ nosetests.xml
 
 # Django
 
+settings.py
 db
